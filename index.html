@@ -5,7 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>冷蔵庫レシピ</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
+<link rel="manifest" href="/recipe-app/manifest.json">
+<meta name="theme-color" content="#2d6a4f">
+<link rel="apple-touch-icon" href="/recipe-app/icon-192.png">
+<script>
+  if('serviceWorker' in navigator){
+    window.addEventListener('load',()=>{
+      navigator.serviceWorker.register('/recipe-app/sw.js');
+    });
+  }
+</script>
+  <style>
 :root{
   --bg:#f8f7f4;--surface:#fff;--border:#e8e5df;--text:#1a1a1a;--muted:#888;
   --accent:#2d6a4f;--al:#e8f4ee;
